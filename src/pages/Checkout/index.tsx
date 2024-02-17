@@ -1,4 +1,4 @@
-import { Wrapper } from "../../components/Coffees/styles";
+import { Wrapper } from "./styles";
 import { Subtitle } from "../../components/Subtitle";
 import { Bank, CreditCard, Money } from "phosphor-react";
 import { Container, Main } from "./styles";
@@ -7,8 +7,8 @@ import { CheckoutCart } from "../../components/CheckoutCart";
 export function CheckOut() {
   return (
     <>
-      <Wrapper>
-        <Container>
+      <Container>
+        <Wrapper>
           <Main>
             <div>
               <h2>Complete seu pedido</h2>
@@ -78,8 +78,8 @@ export function CheckOut() {
               </section>
             </div>
           </Main>
-        </Container>
-      </Wrapper>
+        </Wrapper >
+      </Container>
     </>
   );
 }
