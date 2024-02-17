@@ -1,4 +1,4 @@
-import { Wrapper } from "../../components/Coffees/styles";
+import { Wrapper } from "./style";
 import img1 from "/assets/image1.svg";
 import img2 from "/assets/image2.svg";
 import img3 from "/assets/image3.svg";

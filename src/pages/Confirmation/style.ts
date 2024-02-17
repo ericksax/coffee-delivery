@@ -2,15 +2,25 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 112rem;
+  margin: auto;
+  width: 100%;
+  max-width: 112rem;
   margin-top: 18.4rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: ${({ theme }) => theme.colors["base-text"]};
 
   h1 {
     font-family: "Baloo 2", sans-serif;
     color: ${({ theme }) => theme.colors["yellow-dark"]};
     font-size: 3.2rem;
+  }
+
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
+  }
+
+  div {
+    width: 100.3%;
   }
 `;
 
@@ -20,7 +30,6 @@ export const Content = styled.div`
   align-items: flex-start;
   margin-top: 4rem;
   padding: 4rem;
-  width: 52.6rem;
   border-radius: 6px 36px;
   gap: 3.2rem;
   position: relative;
@@ -49,6 +58,12 @@ export const BoxImg = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  width: 50%;
+
+  img {
+    /* width: clamp(16rem, 40vw, 48rem); */
+    width: 80%;
+  }
 `;
 
 export const BorderGradient = styled.div`
@@ -61,4 +76,11 @@ export const BorderGradient = styled.div`
   background: linear-gradient(45deg, #dbac2c, #8047f8);
   border-radius: 6px 36px;
   z-index: -1;
+`;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  max-width: 144rem;
+  margin: auto;
+  padding: 2rem;
 `;
