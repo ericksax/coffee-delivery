@@ -9,6 +9,10 @@ export const Container = styled.div`
   padding: 9.2rem clamp(2.4rem, 5vw, 16rem);
   background: ${(props) => props.theme.colors["background"]};
 
+  @media screen and (max-width: 680px) {
+    padding-bottom: 2rem;
+  }
+
   main {
     margin: 9.2rem auto;
     display: flex;
@@ -22,6 +26,7 @@ export const Container = styled.div`
 
     @media screen and (max-width: 680px) {
       flex-direction: column;
+      margin-bottom: 0;
     }
   }
 

@@ -3,7 +3,7 @@ import { Trash } from "phosphor-react";
 import { CheckoutFooter } from "../CheckoutFooter";
 import { useCart } from "../../Hooks/useCart";
 import { TransformCurrency } from "../../Utils/transformCurrency";
-import { Card, CartChecoutContainer, RemoveButton } from "./styles";
+import { Card, CartCheckoutContainer, RemoveButton } from "./styles";
 import { useDispatch } from "react-redux";
 import { decrementQuantity, incrementQuantity, removeCoffee } from "../../store/reducers";
 
@@ -13,7 +13,7 @@ export function CheckoutCart() {
   const dispatch = useDispatch()
 
   return (
-    <CartChecoutContainer>
+    <CartCheckoutContainer>
 
       {coffees.map(coffee => (
         <Card key={coffee.id}>
@@ -36,6 +36,6 @@ export function CheckoutCart() {
         </Card>
       ))}
       <CheckoutFooter />
-    </CartChecoutContainer>
+    </CartCheckoutContainer>
   );
 }

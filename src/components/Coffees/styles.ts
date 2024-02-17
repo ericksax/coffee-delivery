@@ -11,8 +11,9 @@ export const Container = styled.main`
     max-width: 112rem;
     margin: auto;
     padding: 0 2rem;
+
     h1 {
-      font-size: 3.2rem;
+      font-size: clamp(1.6rem, 5vw, 3.2rem);
     }
   }
 `;

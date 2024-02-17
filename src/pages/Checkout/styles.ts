@@ -21,7 +21,7 @@ export const Main = styled.div`
   section {
     > div {
       border-radius: 6px;
-      padding: 4rem;
+      padding: clamp(2rem, 3vw, 4rem);
       background: ${(props) => props.theme.colors["base-card"]};
     }
 
