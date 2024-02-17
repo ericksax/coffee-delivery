@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { CoffeList } from "./reducers";
+import { CoffeeList } from "./reducers";
 
 export const store = configureStore({
-  reducer: CoffeList.reducer,
+  reducer: CoffeeList.reducer,
 });
 
 type GetStateType = typeof store.getState;

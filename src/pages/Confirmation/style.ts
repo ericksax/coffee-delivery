@@ -31,7 +31,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Infobox = styled.div`
+export const InfoBox = styled.div`
   display: flex;
   gap: 1.2rem;
 

@@ -1,12 +1,12 @@
 {
- "coffes": [
+  "coffees": [
     {
       "id": 1,
       "tags": ["tradicional"],
       "title": "Expresso Tradicional",
       "description": "O tradicional café feito com água quente e grãos moídos",
       "price": 990,
-      "image": "./coffes/tradicional.png"
+      "image": "./coffees/tradicional.png"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "title": "Expresso Americano",
       "description": "Expresso diluído, menos intenso que o tradicional",
       "price": 990,
-      "image": "./coffes/americano.png"
+      "image": "./coffees/americano.png"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "title": "Expresso Cremoso",
       "description": "Café expresso tradicional com espuma cremosa",
       "price": 990,
-      "image": "./coffes/expresso-cremoso.png"
+      "image": "./coffees/expresso-cremoso.png"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "title": "Expresso Gelado",
       "description": "Bebida preparada com café expresso e cubos de gelo",
       "price": 990,
-      "image": "./coffes/expresso-gelado.png"
+      "image": "./coffees/expresso-gelado.png"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "title": "Café com Leite",
       "description": "Meio a meio de expresso tradicional com leite vaporizado",
       "price": 990,
-      "image": "./coffes/cafe-com-leite.png"
+      "image": "./coffees/cafe-com-leite.png"
     },
     {
       "id": 6,
@@ -46,15 +46,15 @@
       "title": "Latte",
       "description": "Uma dose de café expresso com o dobro de leite e espuma cremosa",
       "price": 990,
-      "image": "./coffes/latte.png"
+      "image": "./coffees/latte.png"
     },
     {
       "id": 7,
       "tags": ["tradicional", "Com Leite"],
-      "title": "Capuccino",
+      "title": "Cappuccino",
       "description": "Bebida com canela feita de doses iguais de café, leite e espuma",
       "price": 990,
-      "image": "./coffes/capuccino.png"
+      "image": "./coffees/capuccino.png"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "title": "Macchiato",
       "description": "Café expresso misturado com um pouco de leite quente e espuma",
       "price": 990,
-      "image": "./coffes/macchiato.png"
+      "image": "./coffees/macchiato.png"
     }
   ]
 }

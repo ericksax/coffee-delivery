@@ -1,19 +1,19 @@
 import { useSelector } from "react-redux";
-import { CartItemsCoffe } from "../@types/store";
+import { CartItemsCoffee } from "../@types/store";
 import { RootState } from "../store";
 
 
 export function useCart() {
-  const coffes = useSelector<RootState, CartItemsCoffe[]>(state=> state.coffes)
-  
-  const totalPerCoffes = coffes.map(coffe=> coffe.price * coffe.quantity)
-  
-  const totalPrice = totalPerCoffes.reduce((act, acc)=> act + acc, 0) 
+  const coffees = useSelector<RootState, CartItemsCoffee[]>(state => state.coffees)
+
+  const totalPerCoffees = coffees.map(coffee => coffee.price * coffee.quantity)
+
+  const totalPrice = totalPerCoffees.reduce((act, acc) => act + acc, 0)
 
   return {
-    coffes,
-    quantity: coffes.length,
+    coffees,
+    quantity: coffees.length,
     totalPrice,
-    totalPerCoffes,
+    totalPerCoffees,
   }
 }

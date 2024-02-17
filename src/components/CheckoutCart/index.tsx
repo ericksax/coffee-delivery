@@ -5,37 +5,37 @@ import { useCart } from "../../Hooks/useCart";
 import { TransformCurrency } from "../../Utils/transformCurrency";
 import { Card, CartChecoutContainer, RemoveButton } from "./styles";
 import { useDispatch } from "react-redux";
-import { decrementQuantity, incrementQuantity, removeCoffe } from "../../store/reducers";
+import { decrementQuantity, incrementQuantity, removeCoffee } from "../../store/reducers";
 
 export function CheckoutCart() {
 
- const { coffes } = useCart()
- const dispatch = useDispatch()
-  
+  const { coffees } = useCart()
+  const dispatch = useDispatch()
+
   return (
     <CartChecoutContainer>
 
-      {coffes.map(coffe => (
-        <Card key={coffe.id}>
-        <img src={coffe.image} width={64} alt="" />
-        <div>
-          <span>{coffe.title}</span>
+      {coffees.map(coffee => (
+        <Card key={coffee.id}>
+          <img src={coffee.image} width={64} alt="" />
           <div>
-            <QuantityButton
-              handleDecrementAmount={() => dispatch(decrementQuantity(coffe))}
-              handleIncrementAmount={() => dispatch(incrementQuantity(coffe))}
-              quantity={coffe.quantity}
-            />
-            <RemoveButton onClick={() => dispatch(removeCoffe(coffe))}>
-              <Trash size={20} />
-              Remover
-            </RemoveButton>
+            <span>{coffee.title}</span>
+            <div>
+              <QuantityButton
+                handleDecrementAmount={() => dispatch(decrementQuantity(coffee))}
+                handleIncrementAmount={() => dispatch(incrementQuantity(coffee))}
+                quantity={coffee.quantity}
+              />
+              <RemoveButton onClick={() => dispatch(removeCoffee(coffee))}>
+                <Trash size={20} />
+                Remover
+              </RemoveButton>
+            </div>
           </div>
-        </div>
-        <span>{TransformCurrency((coffe.price/100) * coffe.quantity)}</span>
-      </Card>
+          <span>{TransformCurrency((coffee.price / 100) * coffee.quantity)}</span>
+        </Card>
       ))}
-      <CheckoutFooter/>
+      <CheckoutFooter />
     </CartChecoutContainer>
   );
 }

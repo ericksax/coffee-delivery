@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-background: ${props=> props.theme.colors['background']};
-
-  width: 144rem;
-
+  background: ${(props) => props.theme.colors["background"]};
+  width: 100%;
+  max-width: 144rem;
   height: 10.4rem;
   position: fixed;
   top: 0;
@@ -20,6 +19,7 @@ background: ${props=> props.theme.colors['background']};
     justify-content: space-between;
     align-items: center;
     width: 112rem;
+    padding: 2rem;
 
     div {
       display: flex;
@@ -28,23 +28,23 @@ background: ${props=> props.theme.colors['background']};
 
     .location {
       background: ${(props) => props.theme.colors["purple-light"]};
-      border-radius: .6rem;
+      border-radius: 0.6rem;
       color: ${(props) => props.theme.colors["purple-dark"]};
-      padding: .8rem;
+      padding: 0.8rem;
 
       svg {
-        margin-right: .4rem;
+        margin-right: 0.4rem;
       }
     }
 
     .cart {
       background: ${(props) => props.theme.colors["yellow-light"]};
-      padding: .8rem;
-      border-radius: .6rem;
+      padding: 0.8rem;
+      border-radius: 0.6rem;
       margin-left: 1.2rem;
       text-align: center;
       position: relative;
-      color: ${props=> props.theme.colors['yellow-dark']};
+      color: ${(props) => props.theme.colors["yellow-dark"]};
 
       span {
         display: flex;
@@ -53,13 +53,18 @@ background: ${props=> props.theme.colors['background']};
         position: absolute;
         height: 2rem;
         width: 2rem;
-        background: ${({theme}) => theme.colors['yellow-dark'] };
+        background: ${({ theme }) => theme.colors["yellow-dark"]};
         border-radius: 1rem;
         top: -1rem;
         right: -1rem;
         color: white;
         font-size: 12px;
         font-weight: bold;
+      }
+    }
+    @media screen and (max-width: 580px) {
+      .location {
+        display: none;
       }
     }
   }

@@ -1,4 +1,4 @@
-import { Coffes } from "../../components/Coffes";
+import { Coffees } from "../../components/Coffees";
 import { Header } from "../../components/header";
 import { Main } from "../../components/main";
 
@@ -7,7 +7,7 @@ export function Home() {
     <>
       <Header />
       <Main />
-      <Coffes />
+      <Coffees />
     </>
   );
 }

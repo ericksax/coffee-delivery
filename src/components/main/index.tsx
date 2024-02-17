@@ -1,21 +1,21 @@
 import { Container } from "./styles";
-import Imagem from "../../assets/Imagem.svg";
-import CartIcon from '../../assets/cart-icon.svg';
-import WatchIcon from '../../assets/watch-icon.svg';
-import PackageIcon from '../../assets/package-icon.svg';
-import CoffeIcon from '../../assets/coffe-icon.svg';
-import backgroundImg from '../../assets/Background.png'
+import Imagem from "/assets/Imagem.svg";
+import CartIcon from '/assets/cart-icon.svg';
+import WatchIcon from '/assets/watch-icon.svg';
+import PackageIcon from '/assets/package-icon.svg';
+import CoffeeIcon from "/assets/coffee-icon.svg";
+import backgroundImg from '/assets/Background.png'
 
 
 export function Main() {
   return (
-    <Container style={{ 
-      backgroundImage: `url(${backgroundImg})`, 
-      height: "100%", 
-      width: "100%", 
-      backgroundRepeat: "no-repeat", 
-      backgroundSize: 'cover' 
-      }}>
+    <Container style={{
+      backgroundImage: `url(${backgroundImg})`,
+      height: "100%",
+      width: "100%",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: 'cover'
+    }}>
       <main>
         <section>
           <div>
@@ -40,12 +40,12 @@ export function Main() {
               <span>Entrega rápida e rastreada</span>
             </div>
             <div>
-              <img src={CoffeIcon} alt="" />
+              <img src={CoffeeIcon} alt="" />
               <span>O café chega fresquinho até você</span>
             </div>
           </div>
         </section>
-        <img src={Imagem} alt="" />
+        <img className="landImage" src={Imagem} alt="" />
       </main>
     </Container>
   );

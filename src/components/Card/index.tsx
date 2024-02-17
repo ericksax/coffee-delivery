@@ -1,19 +1,18 @@
 import { ButtonCart, Card, WrapperQuantityButton } from "./style";
-import tradicional from "../../assets/coffes/tradicional.png";
 import { ShoppingCart } from "phosphor-react";
 
 import { useDispatch } from "react-redux";
 
-import { addCoffe } from "../../store/reducers";
-import { Coffe } from "../../@types/store";
+import { addCoffee } from "../../store/reducers";
+import { Coffee } from "../../@types/store";
 import { QuantityButton } from "../QuantityButton";
 import { useState } from "react";
 
-interface CoffeCardProps {
-  coffe: Coffe;
+interface CoffeeCardProps {
+  coffee: Coffee;
 }
 
-export function CoffeCard({ coffe }: CoffeCardProps) {
+export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState(1);
@@ -26,37 +25,37 @@ export function CoffeCard({ coffe }: CoffeCardProps) {
     setQuantity((state) => state - 1);
   }
 
-  function handleAddProduct(coffe: Coffe) {
-    const itemTocart = {
-      ...coffe,
+  function handleAddProduct(coffee: Coffee) {
+    const itemToCart = {
+      ...coffee,
       quantity,
     };
 
-    dispatch(addCoffe(itemTocart));
+    dispatch(addCoffee(itemToCart));
   }
 
   return (
-      <Card>
-        <img src={coffe.image} alt="" />
-        {coffe.tags.map((tag: string) => (
-          <span key={`${coffe.id}${tag}`}>{tag}</span>
-        ))}
-        <strong>{coffe.title}</strong>
-        <p>{coffe.description}</p>
-        <div>
-          <span>R$</span>
-          <span>{coffe.price}</span>
-          <WrapperQuantityButton>
-            <QuantityButton
-              quantity={quantity}
-              handleIncrementAmount={handleIncrementAmount}
-              handleDecrementAmount={handleDecrementAmount}
-            />
-            <ButtonCart onClick={() => handleAddProduct(coffe)}>
-              <ShoppingCart weight="fill" size={20} />
-            </ButtonCart>
-          </WrapperQuantityButton>
-        </div>
-      </Card>
+    <Card>
+      <img src={coffee.image} alt="" />
+      {coffee.tags.map((tag: string) => (
+        <span key={`${coffee.id}${tag}`}>{tag}</span>
+      ))}
+      <strong>{coffee.title}</strong>
+      <p>{coffee.description}</p>
+      <div>
+        <span>R$</span>
+        <span>{coffee.price}</span>
+        <WrapperQuantityButton>
+          <QuantityButton
+            quantity={quantity}
+            handleIncrementAmount={handleIncrementAmount}
+            handleDecrementAmount={handleDecrementAmount}
+          />
+          <ButtonCart onClick={() => handleAddProduct(coffee)}>
+            <ShoppingCart weight="fill" size={20} />
+          </ButtonCart>
+        </WrapperQuantityButton>
+      </div>
+    </Card>
   );
 }

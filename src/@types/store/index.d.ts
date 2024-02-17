@@ -1,24 +1,24 @@
-export interface Coffe {
-  id: number
-  tags: string[]
-  title: string
-  description: string
-  price: number
-  image: string
+export interface Coffee {
+  id: number;
+  tags: string[];
+  title: string;
+  description: string;
+  price: number;
+  image: string;
 }
 
-export interface Coffes {
-  coffes: Coffe[]
+export interface Coffees {
+  coffees: Coffee[];
 }
 
 interface CartItemsList {
-  items: CartItem[]
+  items: CartItem[];
 }
 
-interface CartItemsCoffe extends Coffe {
-  quantity: number
+interface CartItemsCoffee extends Coffee {
+  quantity: number;
 }
 
 interface CartItem {
-  coffes: CartItemsCoffe[]
+  coffees: CartItemsCoffee[];
 }

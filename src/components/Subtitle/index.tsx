@@ -1,5 +1,4 @@
 import { CurrencyDollar, MapPinLine } from "phosphor-react";
-import { ReactNode } from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -16,11 +15,11 @@ export const Container = styled.div`
       font-weight: 400;
       font-size: 16px;
       line-height: 130%;
-      color: ${props=> props.theme.colors['base-subtitle']}
+      color: ${props => props.theme.colors['base-subtitle']}
     }
 
     span + span {
-      color: ${props=> props.theme.colors['base-text']}
+      color: ${props => props.theme.colors['base-text']}
     }
   }
 `;

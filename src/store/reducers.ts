@@ -2,53 +2,58 @@ import { createSlice } from "@reduxjs/toolkit";
 import { CartItem } from "../@types/store";
 
 const initialState: CartItem = {
-  coffes: [],
+  coffees: [],
 };
 
-export const CoffeList = createSlice({
-  name: "coffeList",
+export const CoffeeList = createSlice({
+  name: "coffeeList",
   initialState,
   reducers: {
-    addCoffe: (state, action) => {
-      const isAlreadyAddedOnCart = state.coffes.findIndex(
-        (coffe) => action.payload.id === coffe.id
+    addCoffee: (state, action) => {
+      const isAlreadyAddedOnCart = state.coffees.findIndex(
+        (coffee) => action.payload.id === coffee.id
       );
       if (isAlreadyAddedOnCart === -1) {
-        state.coffes.push(action.payload);
+        state.coffees.push(action.payload);
       } else {
-        state.coffes[isAlreadyAddedOnCart].quantity += action.payload.quantity;
+        state.coffees[isAlreadyAddedOnCart].quantity += action.payload.quantity;
       }
     },
 
-    removeCoffe: (state, action) => {
-      const index = state.coffes.findIndex(
-        (coffe) => coffe.id === action.payload.id
+    removeCoffee: (state, action) => {
+      const index = state.coffees.findIndex(
+        (coffee) => coffee.id === action.payload.id
       );
-      state.coffes.splice(index, 1);
+      state.coffees.splice(index, 1);
     },
 
     decrementQuantity: (state, action) => {
-      const index = state.coffes.findIndex(
-        (coffe) => coffe.id === action.payload.id
+      const index = state.coffees.findIndex(
+        (coffee) => coffee.id === action.payload.id
       );
-      if (state.coffes[index].quantity >= 2) {
-        state.coffes[index].quantity -= 1;
+      if (state.coffees[index].quantity >= 2) {
+        state.coffees[index].quantity -= 1;
       }
     },
 
     incrementQuantity: (state, action) => {
-      const index = state.coffes.findIndex(
-        (coffe) => coffe.id === action.payload.id
+      const index = state.coffees.findIndex(
+        (coffee) => coffee.id === action.payload.id
       );
 
-      state.coffes[index].quantity += 1;
+      state.coffees[index].quantity += 1;
     },
 
-    destroyListCoffe: (state) => {
-      state.coffes = []
-    }
+    destroyListCoffee: (state) => {
+      state.coffees = [];
+    },
   },
 });
 
-export const { addCoffe, removeCoffe, decrementQuantity, incrementQuantity, destroyListCoffe } =
-  CoffeList.actions;
+export const {
+  addCoffee,
+  removeCoffee,
+  decrementQuantity,
+  incrementQuantity,
+  destroyListCoffee,
+} = CoffeeList.actions;

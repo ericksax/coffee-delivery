@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  margin-top: 10.4rem;
+  margin: 10.4rem auto;
   display: grid;
-  grid-template-columns: 64rem 44.8rem;
+
+  grid-template-columns: clamp(44rem, 50vw, 62rem) clamp(14rem, 30vw, 43rem);
+  grid-auto-flow: dense;
   gap: 3.2rem;
 
   h2 {
@@ -121,6 +123,8 @@ export const Main = styled.div`
 
 export const Container = styled.div`
   margin: auto;
+  display: flex;
+  justify-content: center;
   max-width: 144rem;
   background: ${(props) => props.theme.colors["background"]};
 `;

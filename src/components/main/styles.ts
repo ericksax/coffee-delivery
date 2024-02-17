@@ -1,61 +1,71 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   max-width: 144rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 9.2rem 16rem;
+  padding: 9.2rem clamp(2.4rem, 5vw, 16rem);
   background: ${(props) => props.theme.colors["background"]};
- 
- 
 
   main {
     margin: 9.2rem auto;
     display: flex;
+
+    gap: 6.4rem;
+
     width: 100%;
     max-width: 112rem;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 680px) {
+      flex-direction: column;
+    }
   }
 
   section {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: space-between;
+    width: 80%;
 
     p {
       margin-top: 1.6rem;
-      font-size: 2.0rem;
+      font-size: clamp(1.4rem, 1vw, 2.4rem);
     }
 
     h1 {
       font-family: "Baloo 2";
       font-weight: bold;
-      font-size: 4.8rem;
+      font-size: clamp(2.4rem, 3vw, 4.8rem);
       line-height: 130%;
     }
   }
 
-  .icon-blocks { 
+  .landImage {
+    width: clamp(60%, 40vw, 476px);
+  }
+
+  .icon-blocks {
     display: grid;
     max-width: 56.7rem;
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 2.0rem;
+    row-gap: 2rem;
     margin-top: 6.6rem;
+    gap: 1.6rem;
 
-    
     div {
       display: flex;
       align-items: center;
 
       span {
-      font-size: 1.5rem;
-    }
+        font-size: clamp(1rem, 1vw, 1.4rem);
+      }
 
       img {
         margin-right: 1.2rem;

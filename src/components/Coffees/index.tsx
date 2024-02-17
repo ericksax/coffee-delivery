@@ -1,17 +1,17 @@
-import { CoffeCard } from "../Card";
+import { CoffeeCard } from "../Card";
 import { Container, Wrapper } from "./styles";
 import db from '../../../bd.json'
 
-export function Coffes() {
-  const { coffes } = db
+export function Coffees() {
+  const { coffees } = db
 
   return (
     <Container>
-      <div>
+      <div className="title">
         <h1>Nossos cafés</h1>
       </div>
       <Wrapper>
-       {coffes.map(coffe =>  <CoffeCard key={`${coffe.id}`} coffe={coffe}/>)}
+        {coffees.map(coffee => <CoffeeCard key={`${coffee.id}`} coffee={coffee} />)}
       </Wrapper>
     </Container>
   );
